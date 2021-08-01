@@ -1,4 +1,11 @@
 import SpriteKit
+
+public extension Array {
+    func value(_ index: Index) -> Element? {
+        return self.indices.contains(index) ? self[index] : nil
+    }
+}
+
 open class DraggableRect: SKSpriteNode {
     //自身がタッチされた時の処理を書きます.
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
